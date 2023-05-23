@@ -1,4 +1,4 @@
-#configure the AWS provider
+#configure the AWS provider new
 #export AWS_ACCESS_KEY_ID=xx
 #export AWS_SECRET_ACCESS_KEY=xx
 
