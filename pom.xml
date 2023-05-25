@@ -2,9 +2,12 @@
 
 
 <!--changes done to pom.xml file-->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         
   <modelVersion>4.0.0</modelVersion>
+         
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
   <packaging>pom</packaging>
@@ -12,14 +15,17 @@
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
+         
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
   </properties>
+         
   <modules>
     <module>server</module>
     <module>webapp</module>
   </modules>
+         
   <distributionManagement>
     <site>
       <id>site-server</id>
@@ -27,6 +33,7 @@
       <url>file:///tmp/maven-project-site</url>
     </site>
   </distributionManagement>
+         
   <build>
     <plugins>
       <plugin>
@@ -36,12 +43,14 @@
           <target>7</target>
         </configuration>
       </plugin>
+             
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
+             
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
@@ -49,22 +58,28 @@
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <artifactId>maven-jxr-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <artifactId>maven-pmd-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
             </plugin>
+                   
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>taglist-maven-plugin</artifactId>
@@ -73,6 +88,7 @@
         </configuration>
       </plugin>
     </plugins>
+           
     <pluginManagement>
       <plugins>
         <plugin>
